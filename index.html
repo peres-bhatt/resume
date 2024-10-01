@@ -1,384 +1,484 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en" >
+<head>
   <meta charset="UTF-8">
-  <title>CodePen - Resume stuff</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="./style.css">
+  <title>Resume</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito|Cutive+Mono|Open+Sans'><link rel="stylesheet" href="./style.css">
+
 <style>
-* {
-  box-sizing: border-box;
-  transition: 0.35s ease;
+html{
+    font-family: 'Open Sans',sans-serif;
+    background: whitesmoke;
 }
-.rela-block {
-  display: block;
-  position: relative;
-  margin: auto;
-  top: ;
-  left: ;
-  right: ;
-  bottom: ;
+a{
+    text-decoration: none;
+    color: black;
 }
-.rela-inline {
-  display: inline-block;
-  position: relative;
-  margin: auto;
-  top: ;
-  left: ;
-  right: ;
-  bottom: ;
+hr{
+    background: grey;
 }
-.floated {
-  display: inline-block;
-  position: relative;
-  margin: false;
-  top: ;
-  left: ;
-  right: ;
-  bottom: ;
-  float: left;
+#container{
+    position: relative;
+    display: flex;
 }
-.abs-center {
-  display: false;
-  position: absolute;
-  margin: false;
-  top: 50%;
-  left: 50%;
-  right: false;
-  bottom: false;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 88%;
+#profile{
+    flex: 15%;
+    display: block;
+    position: relative;
+    margin: 5% 2% 0 10%;
+    width: 100%;
+    height: 100%;
 }
-body {
-  font-family: 'Open Sans';
-  font-size: 18px;
-  letter-spacing: 0px;
-  font-weight: 400;
-  line-height: 28px;
-  background: url("http://kingofwallpapers.com/leaves/leaves-016.jpg") right no-repeat;
-  background-size: cover;
+#info-cards{
+    flex: 55%;
+    display: block;
+    margin-top: 5%;
+    margin-right: 10%;
+    width: 100%;
+    height: 100%;
 }
-body:before {
-  content: "";
-  display: false;
-  position: fixed;
-  margin: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255,255,255,0.92);
+#image{
+    position: relative;
+    overflow: hidden;
 }
-.caps {
-  text-transform: uppercase;
+#image,#profile-photo{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
 }
-.justified {
-  text-align: justify;
+#image > a{
+    position: absolute;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.5) !important;
+    height: 100%;
+    width: 100%;
+    display: none;
 }
-p.light {
-  color: #777;
+#image > a > i{
+    -webkit-text-stroke: 1px #ffffffdd;
+    padding: 40%;
 }
-h2 {
-  font-family: 'Open Sans';
-  font-size: 30px;
-  letter-spacing: 5px;
-  font-weight: 600;
-  line-height: 40px;
-  color: #000;
+#image:hover a{
+    display: block;
 }
-h3 {
-  font-family: 'Open Sans';
-  font-size: 21px;
-  letter-spacing: 1px;
-  font-weight: 600;
-  line-height: 28px;
-  color: #000;
+#name{
+    font-size: 32px !important;
+    line-height: 25px !important;
 }
-.page {
-  width: 90%;
-  max-width: 1200px;
-  margin: 80px auto;
-  background-color: #fff;
-  box-shadow: 6px 10px 28px 0px rgba(0,0,0,0.4);
+#about,.card > ul > li{
+    padding: 0 0 0 15px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
 }
-.top-bar {
-  height: 220px;
-  background-color: #848484;
-  color: #fff;
+#about{
+    font-size: 20px !important;
+    padding: 0 !important;
 }
-.name {
-  display: false;
-  position: absolute;
-  margin: false;
-  top: false;
-  left: calc(350px + 5%);
-  right: 0;
-  bottom: 0;
-  height: 120px;
-  text-align: center;
-  font-family: 'Raleway';
-  font-size: 58px;
-  letter-spacing: 8px;
-  font-weight: 100;
-  line-height: 60px;
+#name, #about > p{
+    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
 }
-.name div {
-  width: 94%;
+#email{
+    font-size: 15px !important;
+    font-weight: bold !important;
+    font-family: 'Cutive Mono',monospace;
 }
-.side-bar {
-  display: false;
-  position: absolute;
-  margin: false;
-  top: 60px;
-  left: 5%;
-  right: false;
-  bottom: 0;
-  width: 350px;
-  background-color: #f7e0c1;
-  padding: 320px 30px 50px;
+#college,#email,#year-graduation,#education,#more-about,#telephone,#fax{
+    color: #555;
+    font-size: 13.5px;
 }
-.mugshot {
-  display: false;
-  position: absolute;
-  margin: false;
-  top: 50px;
-  left: 70px;
-  right: false;
-  bottom: false;
-  height: 210px;
-  width: 210px;
+strong,span{
+    color: black;
+    font-size: 16px;
 }
-.mugshot .logo {
-  margin: -23px;
+#social-links,#about{
+    display: inline-block;
 }
-.logo {
-  display: false;
-  position: absolute;
-  margin: false;
-  top: 0;
-  left: 0;
-  right: false;
-  bottom: false;
-  z-index: 100;
-  margin: 0;
-  color: #000;
-  height: 250px;
-  width: 250px;
+#social-links{
+    margin-bottom: 12px;
 }
-.logo .logo-svg {
-  height: 100%;
-  width: 100%;
-  stroke: #000;
-  cursor: pointer;
+#social-links a{
+    margin: 0 10px;
 }
-.logo .logo-text {
-  display: false;
-  position: absolute;
-  margin: false;
-  top: 58%;
-  left: ;
-  right: 16%;
-  bottom: ;
-  cursor: pointer;
-  font-family: "Montserrat";
-  font-size: 55px;
-  letter-spacing: 0px;
-  font-weight: 400;
-  line-height: 58.333333333333336px;
+#edit-intro{
+    display: block;
+    color:#097bbf;
+    font-family: 'Nunito', sans-serif;
 }
-.social {
-  padding-left: 60px;
-  margin-bottom: 20px;
-  cursor: pointer;
+.fab{
+    font-size: 1.1em;
 }
-.social:before {
-  content: "";
-  display: false;
-  position: absolute;
-  margin: false;
-  top: -4px;
-  left: 10px;
-  right: false;
-  bottom: false;
-  height: 35px;
-  width: 35px;
-  background-size: cover !important;
+.fab,.fas{
+    color: whitesmoke;
 }
-.social.twitter:before {
-  background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Twitter-07-128.png") center no-repeat;
+#about > a{
+    top: 4px;
+    right: 8px;
 }
-.social.pinterest:before {
-  background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Pinterest-23-128.png") center no-repeat;
+.edit{
+    top: 19px;
+    right: 10px;
 }
-.social.linked-in:before {
-  background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_LinkedIn-128.png") center no-repeat;
+#about > a, .edit{
+    position: absolute;
+    font-size: 5px !important;
 }
-.side-header {
-  font-family: 'Open Sans';
-  font-size: 18px;
-  letter-spacing: 4px;
-  font-weight: 600;
-  line-height: 28px;
-  margin: 60px auto 10px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #888;
+.stroke-transparent {
+ -webkit-text-stroke: 1px #000;
+ -webkit-text-fill-color: transparent;
 }
-.list-thing {
-  padding-left: 25px;
-  margin-bottom: 10px;
+.blue{
+    color: #097bbf !important;
+    font-size: 13px;
 }
-.content-container {
-  margin-right: 0;
-  width: calc(95% - 350px);
-  padding: 25px 40px 50px;
+.stroke-transparent-blue {
+ -webkit-text-stroke: 1px #097bbf;
+ -webkit-text-fill-color: transparent;
 }
-.content-container > * {
-  margin: 0 auto 25px;
+.card{
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,.1);
+    overflow-x: hidden;
+    margin-bottom: 30px;
+    padding: 15px 30px 30px 30px;
+    background-color: #fff;
 }
-.content-container > h3 {
-  margin: 0 auto 5px;
+.card > p{
+    color: #0e141e;
+    font-weight: bolder;
+    font-size: 18px;
+    line-height: 2;
 }
-.content-container > p.long-margin {
-  margin: 0 auto 50px;
+.card > p > i{
+    font-size: 18px;
 }
-.title {
-  width: 80%;
-  text-align: center;
+.card > a{
+    font-weight: 400;
+    font-size: 15px;
+    margin: 0;
+    margin-left: 25px;
+    padding: 0;
+    border: 0;
+    height: auto;
+    background: transparent;
+    color: #097bbf;
+    outline: none;
+    cursor: pointer;
 }
-.separator {
-  width: 240px;
-  height: 2px;
-  background-color: #999;
+.card > ul{
+    list-style-type: none;
 }
-.greyed {
-  background-color: #ddd;
-  width: 100%;
-  max-width: 580px;
-  text-align: center;
-  font-family: 'Open Sans';
-  font-size: 18px;
-  letter-spacing: 6px;
-  font-weight: 600;
-  line-height: 28px;
+.tags{
+    font-size: 17px;
+    font-weight: bolder;
 }
-@media screen and (max-width: 1150px) {
-  .name {
-    color: #fff;
-    font-family: 'Raleway';
-    font-size: 38px;
-    letter-spacing: 6px;
-    font-weight: 100;
-    line-height: 48px;
-  }
+.tags ~ a{
+    display: none !important;
+}
+.tags span{
+    font-size: 14px;
+    font-weight: normal;
+    color: #0e141e;
+}
+.tags span span{
+    color: #738f93;
+}
+@media screen and (max-width:1090px){
+    #profile{
+        margin-left: 5%;
+    }
+}
+@media screen and (max-width:850px){
+    #container{
+        display: block;
+    }
+    #profile{
+        width: 90%;
+    }
+    .card{
+        margin: 0 5%;
+        margin-bottom: 30px;
+    }
 }
 </style>
+
+<!-------table----->
+<style>
+table {
+  text-align: left;
+  position: relative;
+  border-collapse: collapse; 
+  background-color: #ffffff;
+}/* Spacing */
+td, th {
+  border: 1px solid #999;
+  padding: 20px;
+}
+th {
+  background: #9BC3F5;
+  color: Black;
+  border-radius: 0;
+  position: sticky;
+  top: 0;
+  padding: 10px;
+}
+.primary{
+  background-color: #000000
+}
+
+tfoot > tr  {
+  background: black;
+  color: white;
+}
+tbody > tr:hover {
+  background-color: #E8E8E8;
+}
+</style>
+
+<!------------>
+
+
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<!-- FONTS -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-
-<!-- PAGE STUFF -->
-<div class="rela-block page" style="
-    height: 2421px;
-">
-    <div class="rela-block top-bar">
-        <div class="caps name"><div class="abs-center">Jonah Aloysius</div></div>
-    </div>
-    <div class="side-bar">
-        <div class="mugshot">
-            <div class="logo">
-                <svg viewBox="0 0 80 80" class="rela-block logo-svg">
-                    <path d="M 10 10 L 52 10 L 72 30 L 72 70 L 30 70 L 10 50 Z" stroke-width="2.5" fill="none"></path>
-                </svg>
-                <p class="logo-text">kj</p>
+<div id="inner-nav"></div>
+    <div id="container">
+        <div id="profile">
+            <div id="image">
+                <img id="profile-photo" src="https://www.dropbox.com/scl/fi/vygoze5czjcdd5xdnsvgv/1698290839905.png?rlkey=nf85yxniow7dsnsg6onjmn35m&raw=1" alt="Profile-Image">
+                <a href="https://peres-bhatt.github.io/jonah/"><i class="fa fa-external-link stroke-transparent"></i></a>
             </div>
-        </div>
-        
-    <p class="rela-block caps side-header">Contact Details</p>    
-        <p>Peris Bhatt Garden</p>
-        <p>‘Rainbow Queen’ </p>
-        <p>Jeppu, Mangalore -575002</p>
-        <br>
-        <p>jonal85@yahoo.co.in</p><br>
-        <p>+91-8618470961</p>
-        <p>+91-7022644799</p>
+            <p id="name" >JONAH ALOYSIUS<br><span id="email">3rd Engineer</span></p>
+            
+            
+            <div id="social-links">
+            <a href="https://wa.me/918618470961?text=Hello Jonah Aloysius"><i class="fa fa-whatsapp stroke-transparent" style="font-size:24px"></i></a>
+            <a href="https://instagram.com/emanjoh?igshid=NGVhN2U2NjQ0Yg=="><i class="fa fa-instagram stroke-transparent" style="font-size:24px"></i></a>
+            <a href="https://t.me/jelTee"><i class="fa fa-telegram stroke-transparent" style="font-size:24px"></i></a>
+            </div>
+            <br><br>
+            
+            <a id="edit-intro" style="font-size:24px"><i class="fa fa-address-card" ></i>&nbsp;&nbsp;Contact Details</a>
+            <hr width="100%">
+            <div id="about">
+                <p style="display:inline;"></p></div>
                 
+            <p id="year-graduation"> <i class="fa fa-address-book-o stroke-transparent" style="font-size:18px"></i>&nbsp;&nbsp;Address<br><strong>Peres Bhatt Garden <br> "Rainbow Queen" <br> Jeppu, Mangalore - 575002</strong></p><br>
+            
+            <p id="year-graduation"> <i class="fa fa-envelope-o stroke-transparent" style="font-size:18px"></i>&nbsp;&nbsp;E-mail<br><strong>jonal85@yahoo.co.in</strong></p><br>
+            
+            <p id="year-graduation"> <i class="fa fa-phone stroke-transparent" style="font-size:18px"></i>&nbsp;&nbsp;Phone Number<br><strong>+91 - 8618470961 <br> +91 - 7022644799</strong></p><br>
+            
+            
         
-        <p class="rela-block caps side-header">Personal Details</p>
+        <a id="edit-intro" style="font-size:24px"><i class="fa fa-user-circle-o" ></i>&nbsp;&nbsp;Personal Details</a>
+            <hr width="100%">
+            <div id="about">
+                <p style="display:inline;"></p></div> 
+                
+             <p id="year-graduation"> Full Name<br><strong>Jonah Aloysius Peris Bhatt</strong></p> 
+             <p id="year-graduation"> Nationality<br><strong>Indian</strong></p>
+             <p id="year-graduation"> Date of Birth<br><strong>31st May, 1985</strong></p>
+             <p id="year-graduation"> Civil Status<br><strong>Married</strong></p>
+             <p id="year-graduation"> Nearest Airport<br><strong>Mangalore</strong></p>
+             <p id="year-graduation"> Languages Known<br><strong>English, Hindi, Kannada, Konkani, Tulu.</strong></p><br>
+             
+             <a id="edit-intro" style="font-size:24px"><i class="fa fa-bullseye" ></i>&nbsp;&nbsp;Skills</a>
+            <hr width="100%">
+            <div id="about">
+            <p><strong>Adaptibility <br>Teamwork & Collaboration <br>Decission making <br> Leadership & Seamanship</strong></p><br></div></div>
         
-        
-        
-        <p class="light">Full Name:</p><p class="rela-block list-thing"> Jonah Aloysius PerisBhatt</p>
-        
-       <br> <p class="light">Nationality:</p><p class="rela-block list-thing"> Indian</p>
-        
-       <br> <p class="light">Date of Birth:</p><p class="rela-block list-thing"> 31st May, 1985</p>
-        
-<br><p class="light">Civil Status:</p><p class="rela-block list-thing"> Married</p>
-        
-        <br><p class="light">Nearest Airport:</p><p class="rela-block list-thing"> Mangalore</p>
-        
-      <br>  <p class="light">Languages:</p>
-        <p class="rela-block list-thing"> English</p> 
-        <p class="rela-block list-thing"> Hindi</p>
-        <p class="rela-block list-thing"> Kannada</p>
-        <p class="rela-block list-thing"> Konkani</p>
-        <p class="rela-block list-thing"> Tulu</p>
-        
-        
-        
-        <p class="rela-block caps side-header">Skills</p>
-        <p class="rela-block list-thing">Adatibility</p>
-        <p class="rela-block list-thing">Teamwork & Collaboration</p>
-        <p class="rela-block list-thing">Decission making</p>
-        <p class="rela-block list-thing">Leadership & Seamanship</p>
-    </div>
-    
-    
-    <div class="rela-block content-container">
-        <h2 class="rela-block caps title">3rd Engineer</h2>
-        <div class="rela-block separator"></div>
-        <div class="rela-block caps greyed">Objective</div>
-        <p class="long-margin">Intend to build a career with committed &amp; dedicated people, which will help me to explore myself fully and realize my potential. I’m willing to work as a key player in challenging &amp; creative environment. </p>
-        
-        
-       <br> <div class="rela-block caps greyed">Education</div>
+        <div id="info-cards">
+            <div class="card">
+                <p style="font-size:24px" id="edit-intro"><i class="fa fa-crosshairs stroke"></i>&nbsp;&nbsp;&nbsp;Objective</p>
+                <div>Intend to build a career with committed & dedicated people, which will help me to explore myself fully and realize my potential. I’m willing to work as a key player in challenging & creative environment.</div>
+            </div>
+            
+            
+         <div id="info-cards">
+            <div class="card">
+                <p style="font-size:24px" id="edit-intro"><i class="fa fa-graduation-cap stroke" ></i>&nbsp;&nbsp;&nbsp;Education</p>
+               
+                <div><b>G.M.E (Graduate Marine Engineering)</b></div> <div style="font-size:14px">COIMBATORE MARINE COLLEGE (Tamilnadu, India)<br> Passed with ‘A’ grade in Dec, 2009.</div><br>
+                
+                <div><b>B.E (Bachelor of Engineering) in Mechanical</b></div> <div style="font-size:14px">K.V.G COLLEGE OF ENGINEERING, (Karnataka, India)<br>First class [76. 00%] in final year, Aggregate: 57.95% (v to viii semesters).</div>
+            </div> 
+            
+            
+            <div id="info-cards">
+            <div class="card">
+                <p style="font-size:24px" id="edit-intro"><i class="fa fa-ship stroke" ></i>&nbsp;&nbsp;&nbsp;Travel Documents</p>
+                
+                <div><b>PASSPORT</b></div><hr><ul>
+                <li><div style="font-size:12px">Document Number</div>
+                <div><b>Z5036164</b></div></li><br><br>
+                <li><div style="font-size:12px">Place of Issue</div>
+                <div><b>Bengaluru, India</b></div></li><br><br>
+                <li><div style="font-size:12px">Date of Issue</div>
+                <div><b>10th August, 2018</b></div></li><br><br>
+                <li><div style="font-size:12px">Validity</div>
+                <div><b>9th August, 2028</b></div></li><br><br>
+                </ul>
+                
+                <div><b>Seaman Book (CDC)</b></div><hr><ul>
+                <li><div style="font-size:12px">Document Number</div>
+                <div><b>MUM167480</b></div></li><br><br>
+                <li><div style="font-size:12px">Place of Issue</div>
+                <div><b>Mumbai, India</b></div></li><br><br>
+                <li><div style="font-size:12px">Date of Issue</div>
+                <div><b>17-Jan-2020</b></div></li><br><br>
+                <li><div style="font-size:12px">Validity</div>
+                <div><b>16-Jan-2030</b></div></li><br><br>
+                </ul>
+                
+                <div><b>US VISA C1/D</b></div><hr><ul>
+                <li><div style="font-size:12px">Document Number</div>
+                <div><b>N1356474</b></div></li><br><br>
+                <li><div style="font-size:12px">Place of Issue</div>
+                <div><b>Chennai, India</b></div></li><br><br>
+                <li><div style="font-size:12px">Date of Issue</div>
+                <div><b>27-Dec-2022</b></div></li><br><br>
+                <li><div style="font-size:12px">Validity</div>
+                <div><b>20-Dec-2027</b></div></li><br><br>
+                </ul>
+                </div>
+                
+                
+                
+                <div id="info-cards">
+            <div class="card">
+                <p style="font-size:24px" id="edit-intro"><i class="fa fa-certificate stroke" ></i>&nbsp;&nbsp;&nbsp;Certification</p>
+            
+            <div><b>Certificate of Competancy</b></div><hr><ul>
+                <li><div style="font-size:12px">Document Number</div>
+                <div><b>95X-12060</b></div></li><br><br>
+                <li><div style="font-size:12px">Place of Issue</div>
+                <div><b>Mumbai, India</b></div></li><br><br>
+                <li><div style="font-size:12px">Date of Issue</div>
+                <div><b>5-Dec-2022</b></div></li><br><br>
+                <li><div style="font-size:12px">Validity</div>
+                <div><b>18-Nov-2027</b></div></li><br><br>
+                </ul>
+                
+                
+                <div><b>Bahamas Flag Endorsement</b></div><hr><ul>
+                <li><div style="font-size:12px">Document Number</div>
+                <div><b>COE463388-00</b></div></li><br><br>
+                <li><div style="font-size:12px">Place of Issue</div>
+                <div><b>Bahamas</b></div></li><br><br>
+                <li><div style="font-size:12px">Date of Issue</div>
+                <div><b>16-Mar-2023</b></div></li><br><br>
+                <li><div style="font-size:12px">Validity</div>
+                <div><b>18-Nov-2027</b></div></li><br><br>
+                </ul>
+                
+            
+            <div><b>STCW Certificates</b></div><hr>
+            
+  <div style="overflow-x: auto;">
+  <table>
+  
+  <thead>
+    <tr>
+      <th scope="col">STCW Certificates</th>
+      <th scope="col">Number</th>
+      <th scope="col">Issued</th>
+      <th scope="col">Validity</th>
+      <th scope="col">Issued At</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Proficiency in Survival craft & Rescue Boat (PSCRB)</th>
+      <td>20100162122139212 (Part'B')</td>
+      <td>7-Nov-2022</td>
+      <td>11-Aug-2026</td>
+      <td>HIMT</td>
+    </tr>
+    <tr>
+      <th scope="row">Personel Safety & social Responsibility (PST)</th>
+      <td>20100162122139212 (Part'B')</td>
+      <td>8-Nov-2022</td>
+      <td>11-Aug-2026</td>
+      <td>HIMT</td>
+    </tr>
+    <tr>
+      <th scope="row">Advanced Fire Fighting (AFF)</th>
+      <td>20100163122120213 (Part 'B')</td>
+      <td>8-Nov-2022</td>
+      <td>11-Aug-2026</td>
+      <td>HIMT</td>
+    </tr>
+    <tr>
+      <th scope="row">Medical First Aid (MFA)</th>
+      <td>40502364122300711</td>
+      <td>17-Feb-2023</td>
+      <td>16-Feb-2028</td>
+      <td>HIMT</td>
+    </tr>  
+    <tr>
+      <th scope="row">Fire Prevention & Fire Fighting (FPFF)</th>
+      <td>20100163122120213 (Part 'B')</td>
+      <td>8-Nov-2022</td>
+      <td>11-Aug-2026</td>
+      <td>HIMT</td>
+    </tr> 
+  </tbody>
 
-        <h3>COIMBATORE MARINE COLLEGE (Tamilnadu, India)</h3>
-        <p class="light">G.M.E (Graduate Marine Engineering)</p>
-        <p class="justified">Passed with ‘A’ grade in Dec, 2009 </p>
-        
-        <h3>K.V.G COLLEGE OF ENGINEERING, (Karnataka, India).</h3>
-        <p class="light">B.E (Bachelor of Engineering) in Mechanical</p>
-        <p class="justified">First class [76. 00%] in final year, Aggregate: 57.95% (v to viii semesters) </p>
-        
-<br> <div class="rela-block caps greyed">Travel Documents</div> 
+</table></div>
 
-<h3>Passport</h3>
-<br><p class="light">Document Number: Z5036164</p>
-<p class="light">Place of Issue: Bengaluru, India</p>
-<p class="light">Date of Issue: 10th August, 2018</p>
-<p class="light">Validity: 9th August, 2028</p>
+<br><br>
+            
+   <div><b>Other Certificates</b></div><hr>         
+  <div style="overflow-x: auto;">
+  <table>
+  
+  <thead>
+    <tr>
+      <th scope="col">Other Certificates</th>
+      <th scope="col">Number</th>
+      <th scope="col">Issued</th>
+      <th scope="col">Validity</th>
+      <th scope="col">Issued At</th>
+    </tr>
+  </thead>
+  <tbody> 
+  <tr>
+      <th scope="row">SSO Training</th>
+      <td>SAC/B27/11</td>
+      <td>14-Jun-2013</td>
+      <td>Unlimited</td>
+      <td>HIMT</td>
+    </tr>
+  <tr>
+      <th scope="row">Seafarrers Identity Document (SID)</th>
+      <td>C32713407</td>
+      <td>3-Nov-2022</td>
+      <td>2-Nov-2032</td>
+      <td>Directorate General, Mangalore MMD, India</td>
+    </tr>
+  <tr>
+      <th scope="row">Union maritime of India card (MUI)</th>
+      <td>E 052482</td>
+      <td></td>
+      <td>31-Dec-2024</td>
+      <td>MUI, Mumbai, India</td>
+    </tr>
+  <tr>
+      <th scope="row">Identity of Seafarer (INDOS)</th>
+      <td>09EL3444</td>
+      <td>27-May-2009</td>
+      <td>Unlimited</td>
+      <td>Mumbai, India</td>
+    </tr>
+            
 
-<h3>Seaman Book</h3>
-<br><p class="light">Document Number: MUM167480</p>
-<p class="light">Place of Issue: Mumbai, India</p>
-<p class="light">Date of Issue: 10th August, 2018</p>
-<p class="light">Validity: 9th August, 2028</p>
-
-<h3>US VISA C1/D</h3>
-<br><p class="light">Document Number: MUM167480</p>
-<p class="light">Place of Issue: Chennai, India</p>
-<p class="light">Date of Issue: 10th August, 2018</p>
-<p class="light">Validity: 9th August, 2028</p>
-        
-    </div>
-</div>
 <!-- partial -->
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script><script src="./script.js"></script>
-
-
-
-</body></html>
+  
+</body>
+</html>

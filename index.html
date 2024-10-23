@@ -8,10 +8,36 @@
   
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito|Cutive+Mono|Open+Sans'><link rel="stylesheet" href="./style.css">
 
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+<style>
+.kontainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 40%; /* 56.25% = 16:9 Aspect Ratio */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  zoom: 0.72;
+}
+</style>
+
+
 <style>
 html{
-    font-family: 'Open Sans',sans-serif;
-    background: whitesmoke;
+    font-family: 'Palatino', serif;
+    background: linear-gradient(340deg, #000000 0%, #e6e6e6 51%, #f6f6f6 85%);
 }
 a{
     text-decoration: none;
@@ -109,7 +135,7 @@ strong,span{
 #edit-intro{
     display: block;
     color:#097bbf;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Palatino', serif;
 }
 .fab{
     font-size: 1.1em;
@@ -147,7 +173,14 @@ strong,span{
     margin-bottom: 30px;
     padding: 15px 30px 30px 30px;
     background-color: #fff;
+    transition: 0.3s;
+    border-radius: 5px;
 }
+
+.card:hover {
+  box-shadow: 0 6px 20px 0 rgba(0,0,0,0.2);
+}
+
 .card > p{
     color: #0e141e;
     font-weight: bolder;
@@ -207,6 +240,131 @@ strong,span{
 }
 </style>
 
+<!---- div table ------>
+
+<style>
+*{
+  margin: 0;
+  pading: 0;
+  box-sizing: border-box;
+}
+h1{
+  font-weight: 400;
+}
+a{
+  color: inherit;
+}
+p{
+  margin-top: .7em;
+}
+.warning{
+  color: rgb(62,148,236);
+}
+.st_viewport{
+  max-height: 450px;
+  overflow: auto;
+}
+
+[data-table_id="1"]{
+  background-color: rgb(255,115,0);
+}
+[data-table_id="2"]{
+  background-color: rgb(61,53,39);
+  color: rgb(220,220,220);
+}
+[data-table_id="3"]{
+  background-color: rgba(168,189,4, .8);
+}
+[data-table_id="4"]{
+  background-color: rgba(199, 216, 245);
+}
+
+._rank{
+  min-width: 80px;
+}
+._id{
+  min-width: 60px;
+}
+._name{
+  min-width: 130px;
+}
+._surname{
+  min-width: 130px;
+}
+._year{
+  min-width: 80px;
+}
+._section{
+  min-width: 130px;
+}
+
+pre{
+  overflow: auto;
+}
+
+/** Sticky table styles **/
+.st_viewport{
+  background-color: rgb(229,228,231);
+  color: rgb(27,30,36);
+  margin: 10px 0;
+}
+/* ###  Table wrap */
+.st_wrap_table{
+  
+}
+/* ##   header */
+.st_table_header{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background-color: rgb(117,117,117);
+  color: rgb(220,220,220);
+}
+.st_table_header h2{
+  font-weight: 400;
+  margin: 0 20px;
+  padding: 20px 0 0;
+  text-align: left;
+}
+.st_table_header .st_row{
+  color: rgba(220,220,220, .7);
+}
+.st_table_header .st_column{
+  
+}
+/* ##  table */
+.st_table{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/* #   row */
+.st_row{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+.st_table .st_row:nth-child(even){
+  background-color: rgba(0,0,0, .1)
+}
+/* #   column */
+.st_column{
+  padding: 10px 20px;
+}
+</style>
+
+
+
+
 <!-------table----->
 <style>
 table {
@@ -214,6 +372,8 @@ table {
   position: relative;
   border-collapse: collapse; 
   background-color: #ffffff;
+  display: grid;
+  
 }/* Spacing */
 td, th {
   border: 1px solid #999;
@@ -238,22 +398,162 @@ tfoot > tr  {
 tbody > tr:hover {
   background-color: #E8E8E8;
 }
+
+        .image-container {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            object-fit: contain;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
 </style>
+
+<!--- certification 
+
+<style>
+
+
+.box {
+  float: left;
+  width: 50%;
+  padding: 50px;
+  height: 550px;
+  box-shadow: 0 3px 10px 0 rgba(0,0,0,.1);
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 600px) {
+  .box {
+    width: 100%;
+  }
+}
+
+</style>  
+
+<!--- Certification---->
+<style>
+
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.kard {
+  box-shadow: 2px 2px 46px -4px rgba(0, 0, 0, 0.6);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  transition: all 0.2s ease-in-out;
+}
+</style>
+
+<!----  travel doc ---->
+
+<style>
+
+.ccolumn {
+  float: left;
+  width: 33.3%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.rrow {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.rrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .ccolumn {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.bard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+</style>
+
+
+<!---- Modal ------>
+
+ <style>
+        .modal-lg {
+            max-width: 80%;
+        }
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 40%; /* 56.25% - 16:9 aspect ratio */
+            height: 0;
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+
 
 <!------------>
 
 
 </head>
-<body>
+<body style="background-image: url('43.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
 <!-- partial:index.partial.html -->
 <div id="inner-nav"></div>
     <div id="container">
         <div id="profile">
             <div id="image">
-                <img id="profile-photo" src="https://www.dropbox.com/scl/fi/vygoze5czjcdd5xdnsvgv/1698290839905.png?rlkey=nf85yxniow7dsnsg6onjmn35m&raw=1" alt="Profile-Image">
+                <img id="profile-photo" src="jonah.png" alt="Profile-Image">
                 <a href="https://peres-bhatt.github.io/jonah/"><i class="fa fa-external-link stroke-transparent"></i></a>
             </div>
-            <p id="name" >JONAH ALOYSIUS<br><span id="email">3rd Engineer</span></p>
+            <p id="name" >JONAH ALOYSIUS<br><span id="email">3rd Engineer</span></p><br><br>
             
             
             <div id="social-links">
@@ -261,7 +561,7 @@ tbody > tr:hover {
             <a href="https://instagram.com/emanjoh?igshid=NGVhN2U2NjQ0Yg=="><i class="fa fa-instagram stroke-transparent" style="font-size:24px"></i></a>
             <a href="https://t.me/jelTee"><i class="fa fa-telegram stroke-transparent" style="font-size:24px"></i></a>
             </div>
-            <br><br>
+            <br><br><br>
             
             <a id="edit-intro" style="font-size:24px"><i class="fa fa-address-card" ></i>&nbsp;&nbsp;Contact Details</a>
             <hr width="100%">
@@ -274,7 +574,7 @@ tbody > tr:hover {
             
             <p id="year-graduation"> <i class="fa fa-phone stroke-transparent" style="font-size:18px"></i>&nbsp;&nbsp;Phone Number<br><strong>+91 - 8618470961 <br> +91 - 7022644799</strong></p><br>
             
-            
+           <br><br> 
         
         <a id="edit-intro" style="font-size:24px"><i class="fa fa-user-circle-o" ></i>&nbsp;&nbsp;Personal Details</a>
             <hr width="100%">
@@ -287,198 +587,415 @@ tbody > tr:hover {
              <p id="year-graduation"> Civil Status<br><strong>Married</strong></p>
              <p id="year-graduation"> Nearest Airport<br><strong>Mangalore</strong></p>
              <p id="year-graduation"> Languages Known<br><strong>English, Hindi, Kannada, Konkani, Tulu.</strong></p><br>
+        <br><br>     
              
              <a id="edit-intro" style="font-size:24px"><i class="fa fa-bullseye" ></i>&nbsp;&nbsp;Skills</a>
             <hr width="100%">
             <div id="about">
             <p><strong>Adaptibility <br>Teamwork & Collaboration <br>Decission making <br> Leadership & Seamanship</strong></p><br></div></div>
-        
+  
+<!-------->
+      
         <div id="info-cards">
             <div class="card">
-                <p style="font-size:24px" id="edit-intro"><i class="fa fa-crosshairs stroke"></i>&nbsp;&nbsp;&nbsp;Objective</p>
-                <div>Intend to build a career with committed & dedicated people, which will help me to explore myself fully and realize my potential. I’m willing to work as a key player in challenging & creative environment.</div>
+                <p style="font-size:28px" id="edit-intro"><i class="fa fa-crosshairs stroke" style='font-size:36px;color:red'></i>&nbsp;&nbsp;&nbsp;Objective</p>
+                <div  style="font-size:20px; color:#909192; ">Intend to build a career with committed & dedicated people, which will help me to explore myself fully and realize my potential. I’m willing to work as a key player in challenging & creative environment.</div>
             </div>
+        
             
             
-         <div id="info-cards">
+      <!---------->
             <div class="card">
-                <p style="font-size:24px" id="edit-intro"><i class="fa fa-graduation-cap stroke" ></i>&nbsp;&nbsp;&nbsp;Education</p>
+                <p style="font-size:28px" id="edit-intro"><i class="fa fa-graduation-cap stroke" style='font-size:32px;color:red'></i>&nbsp;&nbsp;&nbsp;Education</p><br>
                
-                <div><b>G.M.E (Graduate Marine Engineering)</b></div> <div style="font-size:14px">COIMBATORE MARINE COLLEGE (Tamilnadu, India)<br> Passed with ‘A’ grade in Dec, 2009.</div><br>
+                <div style="font-size:20px"><b>G.M.E (Graduate Marine Engineering)</b></div><br>
+                <div style="font-size:16px; color:#97989A;"><b>COIMBATORE MARINE COLLEGE</b> (Tamilnadu, India)<br> Passed with ‘A’ grade in Dec, 2009.</div><br><br>
                 
-                <div><b>B.E (Bachelor of Engineering) in Mechanical</b></div> <div style="font-size:14px">K.V.G COLLEGE OF ENGINEERING, (Karnataka, India)<br>First class [76. 00%] in final year, Aggregate: 57.95% (v to viii semesters).</div>
+                <div style="font-size:20px"><b>B.E (Bachelor of Engineering) in Mechanical</b></div><br>
+                <div style="font-size:16px; color:#97989A;"><b>K.V.G COLLEGE OF ENGINEERING,</b> (Karnataka, India)<br>First class [76. 00%] in final year, Aggregate: 57.95% (v to viii semesters).</div>
             </div> 
             
             
-            <div id="info-cards">
+        <!---------->
             <div class="card">
-                <p style="font-size:24px" id="edit-intro"><i class="fa fa-ship stroke" ></i>&nbsp;&nbsp;&nbsp;Travel Documents</p>
+                <p style="font-size:28px" id="edit-intro"><i class="fa fa-ship stroke" style='font-size:36px;color:red'></i>&nbsp;&nbsp;&nbsp;Travel Documents</p><br><br>
                 
-                <div><b>PASSPORT</b></div><hr><ul>
-                <li><div style="font-size:12px">Document Number</div>
-                <div><b>Z5036164</b></div></li><br><br>
-                <li><div style="font-size:12px">Place of Issue</div>
-                <div><b>Bengaluru, India</b></div></li><br><br>
-                <li><div style="font-size:12px">Date of Issue</div>
-                <div><b>10th August, 2018</b></div></li><br><br>
-                <li><div style="font-size:12px">Validity</div>
-                <div><b>9th August, 2028</b></div></li><br><br>
-                </ul>
-                
-                <div><b>Seaman Book (CDC)</b></div><hr><ul>
-                <li><div style="font-size:12px">Document Number</div>
-                <div><b>MUM167480</b></div></li><br><br>
-                <li><div style="font-size:12px">Place of Issue</div>
-                <div><b>Mumbai, India</b></div></li><br><br>
-                <li><div style="font-size:12px">Date of Issue</div>
-                <div><b>17-Jan-2020</b></div></li><br><br>
-                <li><div style="font-size:12px">Validity</div>
-                <div><b>16-Jan-2030</b></div></li><br><br>
-                </ul>
-                
-                <div><b>US VISA C1/D</b></div><hr><ul>
-                <li><div style="font-size:12px">Document Number</div>
-                <div><b>N1356474</b></div></li><br><br>
-                <li><div style="font-size:12px">Place of Issue</div>
-                <div><b>Chennai, India</b></div></li><br><br>
-                <li><div style="font-size:12px">Date of Issue</div>
-                <div><b>27-Dec-2022</b></div></li><br><br>
-                <li><div style="font-size:12px">Validity</div>
-                <div><b>20-Dec-2027</b></div></li><br><br>
-                </ul>
-                </div>
-                
-                
-                
-                <div id="info-cards">
-            <div class="card">
-                <p style="font-size:24px" id="edit-intro"><i class="fa fa-certificate stroke" ></i>&nbsp;&nbsp;&nbsp;Certification</p>
-            
-            <div><b>Certificate of Competancy</b></div><hr><ul>
-                <li><div style="font-size:12px">Document Number</div>
-                <div><b>95X-12060</b></div></li><br><br>
-                <li><div style="font-size:12px">Place of Issue</div>
-                <div><b>Mumbai, India</b></div></li><br><br>
-                <li><div style="font-size:12px">Date of Issue</div>
-                <div><b>5-Dec-2022</b></div></li><br><br>
-                <li><div style="font-size:12px">Validity</div>
-                <div><b>18-Nov-2027</b></div></li><br><br>
-                </ul>
-                
-                
-                <div><b>Bahamas Flag Endorsement</b></div><hr><ul>
-                <li><div style="font-size:12px">Document Number</div>
-                <div><b>COE463388-00</b></div></li><br><br>
-                <li><div style="font-size:12px">Place of Issue</div>
-                <div><b>Bahamas</b></div></li><br><br>
-                <li><div style="font-size:12px">Date of Issue</div>
-                <div><b>16-Mar-2023</b></div></li><br><br>
-                <li><div style="font-size:12px">Validity</div>
-                <div><b>18-Nov-2027</b></div></li><br><br>
-                </ul>
-                
-            
-            <div><b>STCW Certificates</b></div><hr>
-            
-  <div style="overflow-x: auto;">
-  <table>
-  
-  <thead>
-    <tr>
-      <th scope="col">STCW Certificates</th>
-      <th scope="col">Number</th>
-      <th scope="col">Issued</th>
-      <th scope="col">Validity</th>
-      <th scope="col">Issued At</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Proficiency in Survival craft & Rescue Boat (PSCRB)</th>
-      <td>20100162122139212 (Part'B')</td>
-      <td>7-Nov-2022</td>
-      <td>11-Aug-2026</td>
-      <td>HIMT</td>
-    </tr>
-    <tr>
-      <th scope="row">Personel Safety & social Responsibility (PST)</th>
-      <td>20100162122139212 (Part'B')</td>
-      <td>8-Nov-2022</td>
-      <td>11-Aug-2026</td>
-      <td>HIMT</td>
-    </tr>
-    <tr>
-      <th scope="row">Advanced Fire Fighting (AFF)</th>
-      <td>20100163122120213 (Part 'B')</td>
-      <td>8-Nov-2022</td>
-      <td>11-Aug-2026</td>
-      <td>HIMT</td>
-    </tr>
-    <tr>
-      <th scope="row">Medical First Aid (MFA)</th>
-      <td>40502364122300711</td>
-      <td>17-Feb-2023</td>
-      <td>16-Feb-2028</td>
-      <td>HIMT</td>
-    </tr>  
-    <tr>
-      <th scope="row">Fire Prevention & Fire Fighting (FPFF)</th>
-      <td>20100163122120213 (Part 'B')</td>
-      <td>8-Nov-2022</td>
-      <td>11-Aug-2026</td>
-      <td>HIMT</td>
-    </tr> 
-  </tbody>
+               <div class="rrow">
 
-</table></div>
+  <div class="ccolumn">
+    <div class="bard">
+          <div style="font-size:20px;"><b>PASSPORT</b></div><hr>
+                <div style="font-size:12px; color:#97989A;">Document Number</div>
+                <div><b>Z5036164</b></div><br><br>
+               <div style="font-size:12px">Place of Issue</div>
+                <div><b>Bengaluru, India</b></div><br><br>
+                <div style="font-size:12px; color:#97989A;">Date of Issue</div>
+                <div><b>10th August, 2018</b></div><br><br>
+                <div style="font-size:12px; color:#97989A;">Validity</div>
+                <div><b>9th August, 2028</b></div>
+                
+    </div>
+  </div>
+
+  
+  <div class="ccolumn">
+    <div class="bard">
+        <div style="font-size:20px;"><b>Seaman Book (CDC)</b></div><hr>
+                <div style="font-size:12px; color:#97989A;">Document Number</div>
+                <div><b>MUM167480</b></div><br><br>
+                <div style="font-size:12px; color:#97989A;">Place of Issue</div>
+                <div><b>Mumbai, India</b></div><br><br>
+                <div style="font-size:12px; color:#97989A;">Date of Issue</div>
+                <div><b>17-Jan-2020</b></div><br><br>
+                <div style="font-size:12px; color:#97989A;">Validity</div>
+                <div><b>16-Jan-2030</b></div>
+                
+    </div>
+  </div>
+  
+  <div class="ccolumn">
+    <div class="bard">
+        <div style="font-size:20px;"><b> US VISA C1/D</b></div><hr>
+                
+                <div style="font-size:12px; color:#97989A;">Document Number</div>
+                <div><b>N1356474</b></div><br><br>
+                <div style="font-size:12px; color:#97989A;">Place of Issue</div>
+                <div><b>Chennai, India</b></div><br><br>
+                <div style="font-size:12px; color:#97989A;">Date of Issue</div>
+                <div><b>27-Dec-2022</b></div><br><br>
+                <div style="font-size:12px; color:#97989A;">Validity</div>
+                <div><b>20-Dec-2027</b></div>
+</div>
+</div>
+
+</div></div>
+                
+     <br><br><br>           
+      <!---------->
+            <div class="card">
+                <p style="font-size:30px" id="edit-intro"><i class="fa fa-certificate stroke" style='font-size:36px;color:red'></i>&nbsp;&nbsp;&nbsp;Certification</p><br><br>
+            
+<div class="row">
+  <div class="column">
+    <div class="kard">
+      <h3>Certificate of Competancy</h3><hr>
+      <p><div style="font-size:12px; color:#858689;">Document Number</div><b>95X-12060</b>
+      <p><div style="font-size:12px; color:#858689;">Place of Issue</div><b>Mumbai, India</b>
+      <p><div style="font-size:12px; color:#858689;">Date of Issue</div><b>5-Dec-2022</b>
+      <p><div style="font-size:12px; color:#858689;">Validity</div><b>18-Nov-2027</b>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="kard">
+      <h3>Bahamas Flag Endorsement</h3><hr>
+      <p><div style="font-size:12px; color:#858689;">Document Number</div><b>COE463388-00</b>
+      <p><div style="font-size:12px; color:#858689;">Place of Issue</div><b>Bahamas</b>
+      <p><div style="font-size:12px; color:#858689;">Date of Issue</div><b>16-Mar-2023</b>
+      <p><div style="font-size:12px; color:#858689;">Validity</div><b>18-Nov-2027</b>
+    </div>
+  </div>
+</div><br><br>
+
+
+                
+            
+           <br><br> <div><h4><b>STCW Certificates</b></h4></div><br><br>
+            
+  <div class="kard" style="overflow-x: hidden; background-color: #95979a; font-family: sans-serif; color: rgb(220,220,220); padding: 10px; width: 100%;">
+  <main class="st_viewport">
+  <div class="st_wrap_table" data-table_id="0">
+  
+    <header class="st_table_header">
+      <h3>Proficiency in Survival craft & Rescue Boat (PSCRB)</h3>
+    </header>
+    
+    <div class="st_table">
+      <div class="st_row">
+        <div class="st_column _rank">Document Number</div>
+        <div class="st_column _name">20100162122139212 (Part'B')</div>
+      </div>
+            <div class="st_row">
+        <div class="st_column _rank">Place of Issue</div>
+        <div class="st_column _name">&nbsp; &nbsp; &nbsp; &nbsp; HIMT - Chennai, India</div>
+      </div>
+            <div class="st_row">
+        <div class="st_column _rank">Date of Issue</div>
+        <div class="st_column _surname">&nbsp; &nbsp; &nbsp; &nbsp; 7-Nov-2022</div>
+      </div>
+            <div class="st_row">
+        <div class="st_column _surname">Validity</div>
+        <div class="st_column _year">&nbsp; &nbsp; &nbsp; &nbsp; 11-Aug-2026</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="st_wrap_table" data-table_id="0">
+    <header class="st_table_header">
+      <h3>Personel Safety & social Responsibility (PST)</h3>
+    </header>
+    <div class="st_table">
+      <div class="st_row">
+        <div class="st_column _rank">Document Number</div>
+        <div class="st_column _name">20100162122139212 (Part'B')</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _rank">Place of Issue</div>
+        <div class="st_column _name">&nbsp; &nbsp; &nbsp; &nbsp; HIMT - Chennai, India</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _name">Date of Issue</div>
+        <div class="st_column _surname">&nbsp; &nbsp; &nbsp; &nbsp; 8-Nov-2022</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _surname">Validity</div>
+        <div class="st_column _year">&nbsp; &nbsp; &nbsp; &nbsp; 11-Aug-2026</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="st_wrap_table" data-table_id="0">
+    <header class="st_table_header">
+      <h3>Advanced Fire Fighting (AFF)</h3>
+    </header>
+    <div class="st_table">
+      <div class="st_row">
+        <div class="st_column _rank">Document Number</div>
+        <div class="st_column _name">20100163122120213 (Part 'B')</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _rank">Place of Issue</div>
+        <div class="st_column _name">&nbsp; &nbsp; &nbsp; &nbsp; HIMT - Chennai, India</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _name">Date of Issue</div>
+        <div class="st_column _surname">&nbsp; &nbsp; &nbsp; &nbsp; 8-Nov-2022</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _surname">Validity</div>
+        <div class="st_column _year">&nbsp; &nbsp; &nbsp; &nbsp; 11-Aug-2026</div>
+      </div>
+    </div>
+  </div>
+  
+    <div class="st_wrap_table" data-table_id="0">
+    <header class="st_table_header">
+      <h3>Medical First Aid (MFA)</h3>
+    </header>
+    <div class="st_table">
+      <div class="st_row">
+        <div class="st_column _rank">Document Number</div>
+        <div class="st_column _name">40502364122300711</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _rank">Place of Issue</div>
+        <div class="st_column _name">&nbsp; &nbsp; &nbsp; &nbsp; HIMT - Chennai, India</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _name">Date of Issue</div>
+        <div class="st_column _surname">&nbsp; &nbsp; &nbsp; &nbsp; 17-Feb-2023</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _surname">Validity</div>
+        <div class="st_column _year">&nbsp; &nbsp; &nbsp; &nbsp; 16-Feb-2028</div>
+      </div>
+    </div>
+  </div>
+  
+    <div class="st_wrap_table" data-table_id="0">
+    <header class="st_table_header">
+      <h3>Fire Prevention & Fire Fighting (FPFF)</h3>
+    </header>
+    <div class="st_table">
+      <div class="st_row">
+        <div class="st_column _rank">Document Number</div>
+        <div class="st_column _name">20100163122120213 (Part 'B')</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _rank">Place of Issue</div>
+        <div class="st_column _name">&nbsp; &nbsp; &nbsp; &nbsp; HIMT - Chennai, India</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _name">Date of Issue</div>
+        <div class="st_column _surname">&nbsp; &nbsp; &nbsp; &nbsp; 8-Nov-2022</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _surname">Validity</div>
+        <div class="st_column _year">&nbsp; &nbsp; &nbsp; &nbsp; 11-Aug-2026</div>
+      </div>
+    </div>
+  </div>
+</main>
+</div>
 
 <br><br>
-            
-   <div><b>Other Certificates</b></div><hr>         
-  <div style="overflow-x: auto;">
-  <table>
+
+
+
+
+  <!---->  
   
-  <thead>
-    <tr>
-      <th scope="col">Other Certificates</th>
-      <th scope="col">Number</th>
-      <th scope="col">Issued</th>
-      <th scope="col">Validity</th>
-      <th scope="col">Issued At</th>
-    </tr>
-  </thead>
-  <tbody> 
-  <tr>
-      <th scope="row">SSO Training</th>
-      <td>SAC/B27/11</td>
-      <td>14-Jun-2013</td>
-      <td>Unlimited</td>
-      <td>HIMT</td>
-    </tr>
-  <tr>
-      <th scope="row">Seafarrers Identity Document (SID)</th>
-      <td>C32713407</td>
-      <td>3-Nov-2022</td>
-      <td>2-Nov-2032</td>
-      <td>Directorate General, Mangalore MMD, India</td>
-    </tr>
-  <tr>
-      <th scope="row">Union maritime of India card (MUI)</th>
-      <td>E 052482</td>
-      <td></td>
-      <td>31-Dec-2024</td>
-      <td>MUI, Mumbai, India</td>
-    </tr>
-  <tr>
-      <th scope="row">Identity of Seafarer (INDOS)</th>
-      <td>09EL3444</td>
-      <td>27-May-2009</td>
-      <td>Unlimited</td>
-      <td>Mumbai, India</td>
-    </tr>
+  
+  
+   <div><h4><b>Other Certificates</b></h4></div><br><br>       
+   <div class="kard" style="overflow-x: hidden; background-color: #95979a; font-family: sans-serif; color: rgb(220,220,220); padding: 10px; width: 100%; ">
+  <main class="st_viewport">
+  <div class="st_wrap_table" data-table_id="0">
+  
+    <header class="st_table_header">
+      <h3>SSO Training</h3>
+    </header>
+    
+    <div class="st_table">
+      <div class="st_row">
+        <div class="st_column _rank">Document Number</div>
+        <div class="st_column _name">SAC/B27/11</div>
+      </div>
+            <div class="st_row">
+        <div class="st_column _rank">Place of Issue</div>
+        <div class="st_column _name">&nbsp; &nbsp; &nbsp;  HIMT - Chennai, India</div>
+      </div>
+            <div class="st_row">
+        <div class="st_column _rank">Date of Issue</div>
+        <div class="st_column _surname">&nbsp; &nbsp; &nbsp;  &nbsp; 14-Jun-2013</div>
+      </div>
+            <div class="st_row">
+        <div class="st_column _surname">Validity</div>
+        <div class="st_column _year">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Unlimited.</div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="st_wrap_table" data-table_id="0">
+    <header class="st_table_header">
+      <h3>Seafarrers Identity Document (SID)</h3>
+    </header>
+    <div class="st_table">
+      <div class="st_row">
+        <div class="st_column _rank">Document Number</div>
+        <div class="st_column _name">C32713407</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _rank">Place of Issue</div>
+        <div class="st_column _name">&nbsp; &nbsp; &nbsp; Directorate General, Mangalore MMD, India</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _name">Date of Issue</div>
+        <div class="st_column _surname">&nbsp; &nbsp; &nbsp;  &nbsp; 3-Nov-2022</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _surname">Validity</div>
+        <div class="st_column _year">&nbsp; &nbsp; &nbsp;  &nbsp; 2-Nov-2032</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="st_wrap_table" data-table_id="0">
+    <header class="st_table_header">
+      <h3>Union maritime of India card (MUI)</h3>
+    </header>
+    <div class="st_table">
+      <div class="st_row">
+        <div class="st_column _rank">Document Number</div>
+        <div class="st_column _name">E 052482</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _rank">Place of Issue</div>
+        <div class="st_column _name">&nbsp; &nbsp; &nbsp;   MUI, Mumbai, India</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _name">Date of Issue</div>
+        <div class="st_column _surname">&nbsp; &nbsp; &nbsp;  &nbsp; </div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _surname">Validity</div>
+        <div class="st_column _year">&nbsp; &nbsp; &nbsp;  &nbsp; 31-Dec-2024</div>
+      </div>
+    </div>
+  </div>
+  
+    <div class="st_wrap_table" data-table_id="0">
+    <header class="st_table_header">
+      <h3>Identity of Seafarer (INDOS)</h3>
+    </header>
+    <div class="st_table">
+      <div class="st_row">
+        <div class="st_column _rank">Document Number</div>
+        <div class="st_column _name">09EL3444</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _rank">Place of Issue</div>
+        <div class="st_column _name">&nbsp; &nbsp; &nbsp;  &nbsp; Mumbai, India</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _name">Date of Issue</div>
+        <div class="st_column _surname">&nbsp; &nbsp;  &nbsp;&nbsp; 27-May-2009</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _surname">Validity</div>
+        <div class="st_column _year">&nbsp; &nbsp; &nbsp;  &nbsp; Unlimited.</div>
+      </div>
+    </div>
+  </div>
+</main>
+</div>
+
+<br><br></div>
+
+ <!---------->
+
+            <div class="card">
+                <p style="font-size:28px;" id="edit-intro" ><i class="fa fa-graduation-cap stroke" style='font-size:36px;color:red'></i>&nbsp;&nbsp;&nbsp;Experience | Sea Service</p>
+                
+                 <div class="kontainer"> 
+  <iframe class="responsive-iframe" src="sea service.html"></iframe>
+</div>  <br>
+                
+  <!--- modal ----->
+  
+   <!-- Button to trigger modal -->
+    <button style="background-color:#097bbf" type="button" class="btn btn-primary" data-toggle="modal" data-target="#largeModal">
+        Open Larger view.
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="largeModalLabel">Sea Service</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="iframe-container">
+                        <iframe src="sea service.html" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!------------>
+
+ </div>                
             
+                
+
 
 <!-- partial -->
-  
+
+      
+ 
+
 </body>
 </html>

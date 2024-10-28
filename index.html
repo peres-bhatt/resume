@@ -2,15 +2,26 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Resume</title>
+  <title>Curriculum Vitae</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+  <link rel="icon" href="curriculum-vitae5-1.ico">
   
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito|Cutive+Mono|Open+Sans'><link rel="stylesheet" href="./style.css">
 
 
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!---- scroll anim ---->
+  
+   <script>
+ 
+</script>
 
+<style>
+
+</style>
+
+<!------------>
 
 <style>
 .kontainer {
@@ -29,8 +40,9 @@
   width: 100%;
   height: 100%;
   border: none;
-  zoom: 0.72;
+  zoom: 0.65;
 }
+
 </style>
 
 
@@ -177,9 +189,6 @@ strong,span{
     border-radius: 5px;
 }
 
-.card:hover {
-  box-shadow: 0 6px 20px 0 rgba(0,0,0,0.2);
-}
 
 .card > p{
     color: #0e141e;
@@ -287,6 +296,7 @@ p{
 }
 ._name{
   min-width: 130px;
+  
 }
 ._surname{
   min-width: 130px;
@@ -304,9 +314,10 @@ pre{
 
 /** Sticky table styles **/
 .st_viewport{
-  background-color: rgb(229,228,231);
+  background-color: #ffffff;
   color: rgb(27,30,36);
   margin: 10px 0;
+  
 }
 /* ###  Table wrap */
 .st_wrap_table{
@@ -318,8 +329,9 @@ pre{
   position: sticky;
   top: 0px;
   z-index: 1;
-  background-color: rgb(117,117,117);
+  background-color: #535a64;
   color: rgb(220,220,220);
+  padding:2px;
 }
 .st_table_header h2{
   font-weight: 400;
@@ -365,7 +377,7 @@ pre{
 
 
 
-<!-------table----->
+<!-------table
 <style>
 table {
   text-align: left;
@@ -424,6 +436,10 @@ tbody > tr:hover {
   box-shadow: 0 3px 10px 0 rgba(0,0,0,.1);
 }
 
+.box:hover {
+box-shadow: 0 6px 20px 0 rgba(0,0,0,.1);
+}
+
 .clearfix::after {
   content: "";
   clear: both;
@@ -470,12 +486,18 @@ tbody > tr:hover {
 
 /* Style the counter cards */
 .kard {
-  box-shadow: 2px 2px 46px -4px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 23px -4px rgba(0, 0, 0, 0.2);
   padding: 16px;
   text-align: center;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   transition: all 0.2s ease-in-out;
 }
+
+.kard:hover {
+box-shadow: 4px 4px 46px -4px rgba(0, 0, 0, 0.2);
+background:linear-gradient(340deg, #097bbf40 0%, #ffffff 51%, #f6f6f640 85%);
+)
+
 </style>
 
 <!----  travel doc ---->
@@ -512,8 +534,14 @@ tbody > tr:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
   text-align: center;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
 }
+
+.bard:hover {
+box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2);
+background:linear-gradient(340deg, #097bbf40 0%, #e6e6e640 51%, #ffffff 85%);
+}
+
 </style>
 
 
@@ -521,7 +549,7 @@ tbody > tr:hover {
 
  <style>
         .modal-lg {
-            max-width: 80%;
+            max-width: 82%;
         }
         .iframe-container {
             position: relative;
@@ -539,6 +567,98 @@ tbody > tr:hover {
     </style>
 
 
+<!---download callout ---->
+<style>
+
+        .alert a {
+            color: silver; /* Unvisited link */
+            text-decoration: none;
+        }
+        .alert a:visited {
+            color: gray; /* Visited link */
+        }
+        .alert a:hover {
+            color: white; /* Mouse over link */
+        }
+        .alert a:active {
+            color: #2596be; /* Selected link */
+        }
+    
+.alert {
+  padding: 20px;
+  background-color: #00000090;
+  box-shadow: 0 0 8px black;
+  border: 3px solid #2596be;
+  border-radius: 40px;
+  position: fixed;
+  bottom: 35px;
+  right: 20px;
+  color: #2596be;
+  z-index: 100;
+}
+.alert:hover {
+  background-color: #2596be;
+  transition: 0.6s;
+  color: white;
+  border: 3px solid silver;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: black;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: white;
+}
+        
+</style>
+
+<!--- Delay Div Appearance for download callout ---->
+<style>
+        #delayedDiv {
+            display: none;
+            
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        
+    </style>
+
+
+ <!-----Image and Text Side by Side------>
+    <style>
+  .dbinder {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.dbinder img {
+  max-width: 30px;
+}
+
+.dtext {
+  font-size: 16px;
+  padding-left: 10px;
+}
+  </style>
 
 <!------------>
 
@@ -564,7 +684,7 @@ tbody > tr:hover {
             <br><br><br>
             
             <a id="edit-intro" style="font-size:24px"><i class="fa fa-address-card" ></i>&nbsp;&nbsp;Contact Details</a>
-            <hr width="100%">
+            <hr width="65%">
             <div id="about">
                 <p style="display:inline;"></p></div>
                 
@@ -577,7 +697,7 @@ tbody > tr:hover {
            <br><br> 
         
         <a id="edit-intro" style="font-size:24px"><i class="fa fa-user-circle-o" ></i>&nbsp;&nbsp;Personal Details</a>
-            <hr width="100%">
+            <hr width="65%">
             <div id="about">
                 <p style="display:inline;"></p></div> 
                 
@@ -590,16 +710,16 @@ tbody > tr:hover {
         <br><br>     
              
              <a id="edit-intro" style="font-size:24px"><i class="fa fa-bullseye" ></i>&nbsp;&nbsp;Skills</a>
-            <hr width="100%">
+            <hr width="65%">
             <div id="about">
-            <p><strong>Adaptibility <br>Teamwork & Collaboration <br>Decission making <br> Leadership & Seamanship</strong></p><br></div></div>
+            <p><strong>Adaptibility <br>Teamwork & Collaboration <br>Decision making <br> Leadership & Seamanship</strong></p><br></div></div>
   
 <!-------->
       
         <div id="info-cards">
             <div class="card">
                 <p style="font-size:28px" id="edit-intro"><i class="fa fa-crosshairs stroke" style='font-size:36px;color:red'></i>&nbsp;&nbsp;&nbsp;Objective</p>
-                <div  style="font-size:20px; color:#909192; ">Intend to build a career with committed & dedicated people, which will help me to explore myself fully and realize my potential. I’m willing to work as a key player in challenging & creative environment.</div>
+                <div  style="font-size:20px; color:#909192;">Intend to build a career with committed & dedicated people, which will help me to explore myself fully and realize my potential. I’m willing to work as a key player in challenging & creative environment.</div>
             </div>
         
             
@@ -618,19 +738,19 @@ tbody > tr:hover {
             
         <!---------->
             <div class="card">
-                <p style="font-size:28px" id="edit-intro"><i class="fa fa-ship stroke" style='font-size:36px;color:red'></i>&nbsp;&nbsp;&nbsp;Travel Documents</p><br><br>
+                <p style="font-size:28px" id="edit-intro"><i class="fa fa-ship stroke" style='font-size:36px;color:red'></i>&nbsp;&nbsp;&nbsp;Travel Documents</p><br>
                 
                <div class="rrow">
 
   <div class="ccolumn">
     <div class="bard">
-          <div style="font-size:20px;"><b>PASSPORT</b></div><hr>
+          <div style="font-size:20px;"><b>PASSPORT<br><br></b></div><hr>
                 <div style="font-size:12px; color:#97989A;">Document Number</div>
-                <div><b>Z5036164</b></div><br><br>
+                <div><b>Z5036164</b></div><br>
                <div style="font-size:12px">Place of Issue</div>
-                <div><b>Bengaluru, India</b></div><br><br>
+                <div><b>Bengaluru, India</b></div><br>
                 <div style="font-size:12px; color:#97989A;">Date of Issue</div>
-                <div><b>10th August, 2018</b></div><br><br>
+                <div><b>10th August, 2018</b></div><br>
                 <div style="font-size:12px; color:#97989A;">Validity</div>
                 <div><b>9th August, 2028</b></div>
                 
@@ -640,13 +760,13 @@ tbody > tr:hover {
   
   <div class="ccolumn">
     <div class="bard">
-        <div style="font-size:20px;"><b>Seaman Book (CDC)</b></div><hr>
+        <div style="font-size:20px;"><b>Seaman Book <br>(CDC)</b></div><hr>
                 <div style="font-size:12px; color:#97989A;">Document Number</div>
-                <div><b>MUM167480</b></div><br><br>
+                <div><b>MUM167480</b></div><br>
                 <div style="font-size:12px; color:#97989A;">Place of Issue</div>
-                <div><b>Mumbai, India</b></div><br><br>
+                <div><b>Mumbai, India</b></div><br>
                 <div style="font-size:12px; color:#97989A;">Date of Issue</div>
-                <div><b>17-Jan-2020</b></div><br><br>
+                <div><b>17-Jan-2020</b></div><br>
                 <div style="font-size:12px; color:#97989A;">Validity</div>
                 <div><b>16-Jan-2030</b></div>
                 
@@ -655,14 +775,14 @@ tbody > tr:hover {
   
   <div class="ccolumn">
     <div class="bard">
-        <div style="font-size:20px;"><b> US VISA C1/D</b></div><hr>
+        <div style="font-size:20px;"><b> US VISA<br> C1/D</b></div><hr>
                 
                 <div style="font-size:12px; color:#97989A;">Document Number</div>
-                <div><b>N1356474</b></div><br><br>
+                <div><b>N1356474</b></div><br>
                 <div style="font-size:12px; color:#97989A;">Place of Issue</div>
-                <div><b>Chennai, India</b></div><br><br>
+                <div><b>Chennai, India</b></div><br>
                 <div style="font-size:12px; color:#97989A;">Date of Issue</div>
-                <div><b>27-Dec-2022</b></div><br><br>
+                <div><b>27-Dec-2022</b></div><br>
                 <div style="font-size:12px; color:#97989A;">Validity</div>
                 <div><b>20-Dec-2027</b></div>
 </div>
@@ -670,10 +790,10 @@ tbody > tr:hover {
 
 </div></div>
                 
-     <br><br><br>           
+                
       <!---------->
             <div class="card">
-                <p style="font-size:30px" id="edit-intro"><i class="fa fa-certificate stroke" style='font-size:36px;color:red'></i>&nbsp;&nbsp;&nbsp;Certification</p><br><br>
+                <p style="font-size:30px" id="edit-intro"><i class="fa fa-certificate stroke" style='font-size:36px;color:red'></i>&nbsp;&nbsp;&nbsp;Certification</p><br>
             
 <div class="row">
   <div class="column">
@@ -695,19 +815,19 @@ tbody > tr:hover {
       <p><div style="font-size:12px; color:#858689;">Validity</div><b>18-Nov-2027</b>
     </div>
   </div>
-</div><br><br>
+</div>
 
 
                 
             
-           <br><br> <div><h4><b>STCW Certificates</b></h4></div><br><br>
+           <br><br> <div><h4><b>STCW Certificates</b></h4></div><br>
             
-  <div class="kard" style="overflow-x: hidden; background-color: #95979a; font-family: sans-serif; color: rgb(220,220,220); padding: 10px; width: 100%;">
+  <div class="" style="overflow-x: hidden; background-color: #ffffff; font-family: sans-serif; color: #f8f9fb; padding: 8px;  box-shadow: 0 16px 12px 0 rgba(83, 90, 100, 0.6); margin: auto; width: 80%;">
   <main class="st_viewport">
   <div class="st_wrap_table" data-table_id="0">
   
     <header class="st_table_header">
-      <h3>Proficiency in Survival craft & Rescue Boat (PSCRB)</h3>
+      <h5>Proficiency in Survival craft & Rescue Boat (PSCRB)</h5>
     </header>
     
     <div class="st_table">
@@ -732,7 +852,7 @@ tbody > tr:hover {
   
   <div class="st_wrap_table" data-table_id="0">
     <header class="st_table_header">
-      <h3>Personel Safety & social Responsibility (PST)</h3>
+      <h5>Personel Safety & social Responsibility (PST)</h5>
     </header>
     <div class="st_table">
       <div class="st_row">
@@ -756,7 +876,7 @@ tbody > tr:hover {
   
   <div class="st_wrap_table" data-table_id="0">
     <header class="st_table_header">
-      <h3>Advanced Fire Fighting (AFF)</h3>
+      <h5>Advanced Fire Fighting (AFF)</h5>
     </header>
     <div class="st_table">
       <div class="st_row">
@@ -780,7 +900,7 @@ tbody > tr:hover {
   
     <div class="st_wrap_table" data-table_id="0">
     <header class="st_table_header">
-      <h3>Medical First Aid (MFA)</h3>
+      <h5>Medical First Aid (MFA)</h5>
     </header>
     <div class="st_table">
       <div class="st_row">
@@ -804,7 +924,7 @@ tbody > tr:hover {
   
     <div class="st_wrap_table" data-table_id="0">
     <header class="st_table_header">
-      <h3>Fire Prevention & Fire Fighting (FPFF)</h3>
+      <h5>Fire Prevention & Fire Fighting (FPFF)</h5>
     </header>
     <div class="st_table">
       <div class="st_row">
@@ -837,13 +957,13 @@ tbody > tr:hover {
   
   
   
-   <div><h4><b>Other Certificates</b></h4></div><br><br>       
-   <div class="kard" style="overflow-x: hidden; background-color: #95979a; font-family: sans-serif; color: rgb(220,220,220); padding: 10px; width: 100%; ">
+   <div><h4><b>Other Certificates</b></h4></div><br>       
+   <div class="" style="overflow-x: hidden; background-color: #ffffff; font-family: sans-serif; color: rgb(220,220,220); padding: 10px; width: 100%; box-shadow: 0 16px 32px 0 rgba(83, 90, 100, 0.6);  margin: auto; width: 80%;">
   <main class="st_viewport">
   <div class="st_wrap_table" data-table_id="0">
   
     <header class="st_table_header">
-      <h3>SSO Training</h3>
+      <h5>SSO Training</h5>
     </header>
     
     <div class="st_table">
@@ -869,7 +989,7 @@ tbody > tr:hover {
   
   <div class="st_wrap_table" data-table_id="0">
     <header class="st_table_header">
-      <h3>Seafarrers Identity Document (SID)</h3>
+      <h5>Seafarrers Identity Document (SID)</h5>
     </header>
     <div class="st_table">
       <div class="st_row">
@@ -893,7 +1013,7 @@ tbody > tr:hover {
   
   <div class="st_wrap_table" data-table_id="0">
     <header class="st_table_header">
-      <h3>Union maritime of India card (MUI)</h3>
+      <h5>Union maritime of India card (MUI)</h5>
     </header>
     <div class="st_table">
       <div class="st_row">
@@ -917,7 +1037,7 @@ tbody > tr:hover {
   
     <div class="st_wrap_table" data-table_id="0">
     <header class="st_table_header">
-      <h3>Identity of Seafarer (INDOS)</h3>
+      <h5>Identity of Seafarer (INDOS)</h5>
     </header>
     <div class="st_table">
       <div class="st_row">
@@ -941,22 +1061,22 @@ tbody > tr:hover {
 </main>
 </div>
 
-<br><br></div>
+<br></div>
 
  <!---------->
 
             <div class="card">
-                <p style="font-size:28px;" id="edit-intro" ><i class="fa fa-graduation-cap stroke" style='font-size:36px;color:red'></i>&nbsp;&nbsp;&nbsp;Experience | Sea Service</p>
+                <p style="font-size:28px;" id="edit-intro" ><i class="fa fa-suitcase stroke" style='font-size:36px;color:red'></i>&nbsp;&nbsp;&nbsp;Experience | Sea Service</p>
                 
                  <div class="kontainer"> 
-  <iframe class="responsive-iframe" src="sea service.html"></iframe>
+  <iframe class="responsive-iframe" src="Sea_Service.html"></iframe>
 </div>  <br>
                 
   <!--- modal ----->
   
    <!-- Button to trigger modal -->
     <button style="background-color:#097bbf" type="button" class="btn btn-primary" data-toggle="modal" data-target="#largeModal">
-        Open Larger view.
+        Open to a Larger view.
     </button>
 
     <!-- Modal -->
@@ -971,7 +1091,7 @@ tbody > tr:hover {
                 </div>
                 <div class="modal-body">
                     <div class="iframe-container">
-                        <iframe src="sea service.html" frameborder="0" allowfullscreen></iframe>
+                        <iframe src="Sea_Service.html" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -989,7 +1109,31 @@ tbody > tr:hover {
 
  </div>                
             
-                
+ <!---download callout ---->
+ 
+  <div id="delayedDiv" class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  
+  <a href="Resume.pdf" download> 
+  <div class="dbinder">
+      <div class="image">
+        <img src="ziX5yr67T.png">
+      </div>
+      <div class="dtext">
+        Download Resume
+      </div>
+    </div></a>
+</div>
+                    
+                    
+ <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('delayedDiv').style.display = 'block';
+            }, 5000); // 5000 milliseconds = 5 seconds
+        };
+    </script>
+
 
 
 <!-- partial -->
